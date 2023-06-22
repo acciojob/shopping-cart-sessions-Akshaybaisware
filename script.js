@@ -41,10 +41,9 @@ function addToCart(product) {
 }
 
 // Remove item from cart
-function removeFromCart(productId) {}
-
-// Clear cart
-function clearCart() {}
+function saveCartToSessionStorage() {
+  sessionStorage.setItem('cart', JSON.stringify(cart));
+}
 
 // Initial render
 renderProducts();
